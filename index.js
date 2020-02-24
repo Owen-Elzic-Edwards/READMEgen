@@ -35,13 +35,11 @@ inquire.prompt([
         name: "license"
      }
     ]).then( response => {
-        api.getUser(response.username, function(userData){
+        api.getUser(response.username, userData => {
              var markDown = generate.generateMarkdown(response, userData);
             writeToFile("./genREADME.md", markDown);
         });
-    }).catch(function(err){
-            console.log("error: " + err);
-        });
+    }).catch(err =>console.log("error: " + err));
 
 }
 
