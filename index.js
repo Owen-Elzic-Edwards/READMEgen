@@ -1,18 +1,9 @@
-var inquire = require("inquirer");
-var fs = require("fs");
-var generate = require("./utils/generateMarkdown");
-var api = require("./utils/api")
+const inquire = require("inquirer");
+const fs = require("fs");
+const generate = require("./utils/generateMarkdown");
+const api = require("./utils/api")
 
 const questions = [
-
-];
-
-function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, err => err ? console.log("error:", err) : console.log("success"));
-}
-
-function init() {
-inquire.prompt([
      {
         type: "input",
         message: "What is your Github username?",
@@ -33,10 +24,32 @@ inquire.prompt([
         message: "Please select a license",
         choices: ["MIT", "UNLICENSED", "GNU GPLv3"],
         name: "license"
-     }
-    ]).then( response => {
+     },
+     {
+        type: "input",
+        message: "How do you install your project?",
+        name: "install"
+     },
+     {
+        type: "input",
+        message: "How do you use your project?",
+        name: "usage"
+     },
+     {
+        type: "input",
+        message: "How do you want people to contribute?",
+        name: "contribute"
+     },
+];
+
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, err => err ? console.log("error:", err) : console.log("success"));
+}
+
+function init() {
+inquire.prompt(questions).then( response => {
         api.getUser(response.username, userData => {
-             var markDown = generate.generateMarkdown(response, userData);
+             const markDown = generate.generateMarkdown(response, userData);
             writeToFile("./genREADME.md", markDown);
         });
     }).catch(err =>console.log("error: " + err));

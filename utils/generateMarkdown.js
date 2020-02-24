@@ -12,17 +12,24 @@ ${data.description}
 ## Table of Contents
 
 [Installation](#Installation)
+
 [Usage](#usage)
+
 [License](#license)
+
 [Contributing](#contributing)
+
 [Tests](#tests)
+
 [FAQ](#questions-and-answers)
 
 ## Installation
 
+${data.install}
 
 ## Usage
 
+${data.usage}
 
 ## License
 
@@ -30,6 +37,7 @@ ${data.license}
 
 ## Contributing
 
+${data.contribute}
 
 ## Tests
 
