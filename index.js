@@ -51,8 +51,8 @@ inquire.prompt(questions).then( response => {
         api.getUser(response.username, userData => {
              const markDown = generate.generateMarkdown(response, userData);
             writeToFile("./genREADME.md", markDown);
-        });
-    }).catch(err =>console.log("error: " + err));
+        }).catch(err => console.log("error:", err));
+    }).catch(err => console.log("error:", err));
 
 }
 

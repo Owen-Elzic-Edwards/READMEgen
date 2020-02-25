@@ -3,7 +3,7 @@
 function generateMarkdown(data, userData) {
   return `
 # ${data.title}
-[](https://img.shields.io/github/last-commit/${data.username}/${data.title})
+![](https://img.shields.io/github/last-commit/${data.username}/${data.title})
 
 ## Description
 
