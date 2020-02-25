@@ -1,5 +1,7 @@
 # READMEgen
 
+[](https://img.shields.io/github/last-commit/Ivyparade/READMEgen)
+
 This script generates a README markdown file using a template literal some information gathered using inquire, and github
 
 ## installation
