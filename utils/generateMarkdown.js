@@ -48,7 +48,7 @@ ${data.contribute}
 
 ${userData.realName}
 ![](${userData.avatar})
-${userData.email}
+${data.email}
 
 
 `;
