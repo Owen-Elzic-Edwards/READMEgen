@@ -1,6 +1,6 @@
 
 # README generator
-[](https://img.shields.io/github/last-commit/Ivyparade/READMEgen)
+![](https://img.shields.io/github/last-commit/Ivyparade/READMEgen)
 
 ## Description
 
